@@ -5,11 +5,18 @@
     <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
     <script src="app\lib\angular.min.js"></script>
   </head>
-  <body ng-init="color='orange'">
+  <body ng-init="sports=['tennis','badminton','swimming']">
     Enter Your Name: <input type="text" ng-model="userName" placeholder="" />
     <p>Hello! {{userName}}</p>
-    <p class="{{color}}">
-      Your favorite color
-    </p>
+    <ul>
+      <li>{{sports[0]}}</li>
+      <li>{{sports[1]}}</li>
+      <li>{{sports[2]}}</li>
+    </ul>
+
+    <ul>
+      <li ng-repeat="x in sports">{{x}}</li>
+    </ul>
+
   </body>
 </html>

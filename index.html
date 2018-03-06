@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
   <head>
     <title>TheNetNinja Angular Playlist</title>
     <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app\lib\angular.min.js"></script>
   </head>
   <body>
-
+    Enter Your Name: <input type="text" ng-model="userName" placeholder="" />
+    <p>
+      Hello, {{userName}}
+    </p>
   </body>
 </html>

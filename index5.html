@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myProj1">
+  <head>
+    <title>TheNetNinja Angular Playlist</title>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app\lib\angular.min.js"></script>
+    <script src="app\app5.js"></script>
+  </head>
+  <body>
+    <div ng-controller="MyProj1Controller">
+      <ul>
+        <li ng-repeat="sport in sports">{{sport}}</li>
+      </ul>
+      <p>
+        Greetings!! {{message}}
+      </p>
+    </div>
+  </body>
+</html>

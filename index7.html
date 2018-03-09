@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myProj1">
+  <head>
+    <title>TheNetNinja Angular Playlist</title>
+    <link href="content/css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="app\lib\angular.min.js"></script>
+    <script src="app\app5.js"></script>
+  </head>
+  <body>
+    <begin ng-include="'header6.html'"></begin>
+    Enter sport name: <input type="text" ng-model="keyword" />
+    <div ng-controller="MyProj1Controller">
+      <ul>
+        <li ng-repeat="sport in sports | orderBy:'name' | filter:keyword" ng-show="sport.active"> <!--ng-hide will hide the 'true' ng-show will show the 'true'-->
+          {{sport.name}} price at {{sport.cost | currency:'$ '}}
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

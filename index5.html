@@ -7,13 +7,13 @@
     <script src="app\app5.js"></script>
   </head>
   <body>
+    Enter sport name: <input type="text" ng-model="keyword" />
     <div ng-controller="MyProj1Controller">
       <ul>
-        <li ng-repeat="sport in sports">{{sport}}</li>
+        <li ng-repeat="sport in sports | orderBy:'name' | filter:keyword">
+          {{sport.name}} price at {{sport.cost | currency:'$ '}}
+        </li>
       </ul>
-      <p>
-        Greetings!! {{message}}
-      </p>
     </div>
   </body>
 </html>

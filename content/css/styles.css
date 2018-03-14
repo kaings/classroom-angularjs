@@ -53,6 +53,9 @@ main{
 
 .content{
   padding: 20px;
+  border-radius: 8px;
+  margin: 5px;
+  background: #EEEEEE;
 }
 
 .content button,
